@@ -139,3 +139,82 @@ body{
     }
   }
 }
+
+
+.row{
+  background: $white;
+  border-radius: 20px;
+
+  img{
+    border-top-left-radius: 30px;
+    border-bottom-right-radius:30px ;
+  }
+
+  .titleLogin{
+    font-size: 30px;
+    font-weight: bold;
+    color: $color-primary;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+  }
+
+  .login_btn {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: $color-primary;
+    color: $white;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+
+    &:hover {
+      background: cornflowerblue;
+    }
+  }
+  .form {
+    width: 100%;
+
+    %form-input {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    .input_field {
+      @extend %form-input;
+
+      .form_label {
+        width: 150px;
+        color: $color-primary;
+        margin-right: 10px;
+        font-size: 15px;
+        font-weight: bold;
+
+        @media (max-width: 420px) {
+          margin-bottom: 5px;
+        }
+      } 
+      
+      @mixin test {
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        padding: 8px 10px;
+        border: 1px solid silver;
+      }
+
+      %fields {
+        @include test;
+        font-size: 15px;
+        transition: all 0.3s ease;
+      }
+      .input {
+        @extend %fields;
+        @extend %focus;
+      }
+    }
+    
+  }
+
+}

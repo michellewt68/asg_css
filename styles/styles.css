@@ -147,4 +147,77 @@ body {
             align-items: flex-start;
   }
 }
+
+.row {
+  background: white;
+  border-radius: 20px;
+}
+
+.row img {
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.row .titleLogin {
+  font-size: 30px;
+  font-weight: bold;
+  color: #184890;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.row .login_btn {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0;
+  background: #184890;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+.row .login_btn:hover {
+  background: cornflowerblue;
+}
+
+.row .form {
+  width: 100%;
+}
+
+.row .form .input_field {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.row .form .input_field .form_label {
+  width: 150px;
+  color: #184890;
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@media (max-width: 420px) {
+  .row .form .input_field .form_label {
+    margin-bottom: 5px;
+  }
+}
+
+.row .wrapper .form .input_field .textarea, .wrapper .row .form .input_field .textarea, .row .form .input_field .input {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  padding: 8px 10px;
+  border: 1px solid silver;
+  font-size: 15px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 /*# sourceMappingURL=styles.css.map */
