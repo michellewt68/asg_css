@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="page_wrapper">
@@ -31,7 +32,7 @@
         <div class="sidebar-nav">
           <ul>
             <li>
-              <a href="#">
+              <a href="dashboard.html">
                 <span><i class="fa fa-home" aria-hidden="true"></i></span>
                 <span class="navlink">Dashboard</span>
               </a>
@@ -162,13 +163,13 @@
         </div>
       </div>
     </div>
-    <!-- <script>
-        $(document).ready(function () {
-          $(".bar").onclick(function () {
-            $(".side-bar").toggleClass("hide");
-            $("header, .main-content").toggleClass("slide-left");
-          });
-        });
-      </script> -->
   </body>
+  <script>
+    $(document).ready(function () {
+      $(".bar").click(function () {
+        $(".side-bar").toggleClass("hide");
+        $("header, .main-content").toggleClass("slide-left");
+      });
+    });
+  </script>
 </html>

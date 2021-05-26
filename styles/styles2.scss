@@ -3,14 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap%27");
 @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap%27");
 
-
-a{
-    text-decoration: none;
-}
-
-li{
-    list-style-type: none;
-}
 %boxshadow{
     box-shadow: 0 0 7px $color-primary;
 }
@@ -52,7 +44,7 @@ li{
         margin-bottom: 30px;
 
         a h1{
-            font-family: "Pattaya", sans-serif;
+            font-family: $font-bluto;
             font-size: 50px;
             font-weight: lighter;
             color: $color-primary;
@@ -80,36 +72,33 @@ li{
             margin-left: 15px;
         }
     }
-    // &.hide{
-    //     width: 80px;
-    //     overflow: hidden;
+    &.hide{
+        width: 80px;
+        overflow: hidden;
 
-    //     %hidden-sidebar{
-    //         display: none;
-    //     }
-    //     .title{
-    //         @extend %hidden-sidebar;
-    //     }
-    //     .name{
-    //         @extend %hidden-sidebar;
-    //     }
-    //     .sidebar-nav {
-    //         .navlink{
-    //             @extend %hidden-sidebar;
-    //         }
-    //         span:not(.navlink){
-    //             font-size: 30px;
-    //         }
+        %hidden-sidebar{
+            display: none;
+
+            @media screen and (max-width:992px) {
+                display: block;
+            }
+        }
+        .title{
+            @extend %hidden-sidebar;
+        }
+        .name{
+            @extend %hidden-sidebar;
+        }
+        .sidebar-nav {
+            .navlink{
+                @extend %hidden-sidebar;
+            }
+            span:not(.navlink){
+                font-size: 30px;
+            }
             
-    //     }
-    //     @media screen and (max-width:992px){
-    //         width: 250px;
-    //         left:0;
-    //     }
-    // }
-    // @media screen and (max-width:992px) {
-    //     left: -250px;
-    // }
+        }
+    }
 }
 
 // header scss
@@ -124,7 +113,8 @@ header{
         justify-content: space-between;
         padding-left: 16%;
 
-        .right-navbar form{
+        .right-navbar {
+            form{
             width: 300px;
             height: 45px;
             position: relative;
@@ -155,30 +145,55 @@ header{
                 border: none;
                 cursor: pointer;
             }
-        }
 
-        .left-navbar ul {
-            display: flex;
-            align-items: center;
-            
-            li{
-                margin-left: 30px;
-
-                .profile{
-                    @include avatar;
-                }
-                
-                span i{
-                    font-size: 22px;
-
-                    &:hover{
-                        color: $color-primary;
-                    }
-                }
+            @media screen and (max-width:767px){
+                width: 200px;
+                height: 40px;
+            }
+            @media screen and (max-width:576px){
+                width: 100%;
+                height: 40px;
             }
         }
+        @media screen and (max-width:576px){
+            width: 100%;
+            margin: 5px;
+        }
     }
-  
+
+        .left-navbar{
+            ul {
+                display: flex;
+                align-items: center;
+                
+                li{
+                    margin-left: 30px;
+    
+                    .profile{
+                        @include avatar;
+                    }
+                    
+                    span i{
+                        font-size: 22px;
+    
+                        &:hover{
+                            color: $color-primary;
+                        }
+                    }
+                }
+                @media screen and (max-width:576px){
+                    justify-content: space-between;
+                }
+            }
+            @media screen and (max-width:576px){
+                width: 100%;
+                margin: 5px;
+            }
+        } 
+        @media screen and (max-width:576px){
+            flex-direction: column-reverse;
+        }
+    }
 }
 
 //main-content
@@ -188,7 +203,7 @@ header{
     padding: 15px;
 
     .subtitle-main{
-        font-family: 'Lato', sans-serif;
+        font-family: $font-primary;
         font-size: 30px;
         color: $color-primary;
         font-weight: bold;
@@ -196,6 +211,14 @@ header{
     img{
         width: 400px;
         height: 250px;
+
+        @media screen and (max-width:767px){
+            width: 300px;
+            margin-bottom: 15px;
+        }
+        @media screen and (max-width:576px){
+            width: 330px;
+        }
     }
 
     .bank-account{
@@ -230,6 +253,12 @@ header{
                 tbody tr td{
                     padding: 15px 0;
                 }
+                @media screen and (max-width:767px){
+                    width: 700px;
+                }
+            }
+            @media screen and (max-width:767px){
+                overflow-x: auto;
             }
         }
     }
@@ -237,9 +266,31 @@ header{
 
 .slide-left{
     margin-left: 100px;
+
+    @media screen and (max-width:992px) {
+        margin-left: 0;
+        justify-content: bet;
+    }
+}
+header , .main-content{
+    transition: .2s;
 }
 
 .page_wrapper{
     width: 100%;
     overflow-x: hidden!important;
+}
+
+@media screen and (max-width:992px){
+    .side-bar{
+        left: -250px;
+        z-index: 10000;
+    }
+    .side-bar.hide{
+        width: 250px;
+        left:0;
+    }
+    header , .main-content{
+        margin: 5px;
+    }      
 }
