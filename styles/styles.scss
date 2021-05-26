@@ -3,6 +3,11 @@
 @import "reset";
 @import "variables";
 
+body{
+  background: $color-primary;
+  padding: 0 10px;
+}
+
 .appname {
   color: $white;
   text-align: center;

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/styles2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="page_wrapper">
+      <!-- sidebar -->
+      <div class="side-bar">
+        <div class="title">
+          <a href="#"><h1>Bluto</h1></a>
+        </div>
+
+        <div class="avatar">
+          <div class="avatar-img">
+            <img src="assets/profil-pic.jpg" />
+          </div>
+          <div class="name">
+            <h2>Lay Zhang</h2>
+            <h5>user@gmail.com</h5>
+          </div>
+        </div>
+        <div class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="#">
+                <span><i class="fa fa-home" aria-hidden="true"></i></span>
+                <span class="navlink">Dashboard</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                <span class="navlink">Profile</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                <span class="navlink">Transaction</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="login.html">
+                <span><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                <span class="navlink">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- header -->
+      <header class="slide-left">
+        <div class="head_inner">
+          <div class="right-navbar">
+            <form action="">
+              <input type="text" placeholder="Search" />
+              <button><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+          </div>
+
+          <div class="left-navbar">
+            <ul>
+              <li>
+                <div class="profile">
+                  <div class="avatar-img">
+                    <img src="assets/profil-pic.jpg" alt="" />
+                  </div>
+                  <div class="name">
+                    <h3>Lay Zhang</h3>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <span><i class="fa fa-bell" aria-hidden="true"></i></span>
+              </li>
+
+              <li>
+                <span class="bar"
+                  ><i class="fa fa-bars" aria-hidden="true"></i
+                ></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- main -->
+      <div class="main-content">
+        <span class="subtitle-main">List of Your Active Bank Account</span>
+        <div class="bank-account">
+          <div>
+            <a href="card1.html"><img src="assets/card-1.png" alt="" /></a>
+          </div>
+
+          <div>
+            <a href="#"><img src="assets/card-2.jpg" alt="" /></a>
+          </div>
+
+          <div>
+            <a href="#"><img src="assets/card-3.jpg" alt="" /></a>
+          </div>
+        </div>
+        <div class="table">
+          <div class="title">
+            <h2>All Transactions History</h2>
+          </div>
+          <div class="transaction_table">
+            <table>
+              <thead>
+                <tr>
+                  <td>Description</td>
+                  <td>Date</td>
+                  <td>Amount</td>
+                  <td>Type</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mendapat transfer dari rekening xxxxx</td>
+                  <td>10 May 2021</td>
+                  <td>Rp. 150.000,-</td>
+                  <td style="color: green; font-weight: bold">Income</td>
+                </tr>
+
+                <tr>
+                  <td>Transfer Virtual Account Shopee</td>
+                  <td>8 May 2021</td>
+                  <td>Rp. 200.000,-</td>
+                  <td style="color: red; font-weight: bold">Expenses</td>
+                </tr>
+
+                <tr>
+                  <td>Autodebet uang sekolah bulan May</td>
+                  <td>1 May 2021</td>
+                  <td>Rp. 680.000,-</td>
+                  <td style="color: red; font-weight: bold">Expenses</td>
+                </tr>
+
+                <tr>
+                  <td>Innisfree Store</td>
+                  <td>28 April 2021</td>
+                  <td>Rp. 350.000,-</td>
+                  <td style="color: red; font-weight: bold">Expenses</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script>
+        $(document).ready(function () {
+          $(".bar").onclick(function () {
+            $(".side-bar").toggleClass("hide");
+            $("header, .main-content").toggleClass("slide-left");
+          });
+        });
+      </script> -->
+  </body>
+</html>
